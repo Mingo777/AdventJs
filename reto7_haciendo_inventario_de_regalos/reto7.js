@@ -24,5 +24,9 @@ const gifts = getGiftsToRefill(a1, a2, a3) // ['muñeca', 'pc']
 
 function getGiftsToRefill(a1, a2, a3) {
 
-    return [...(new Set(a1.concat(a2, a3)))].filter((object) => a1.includes(object) + a2.includes(object) + a3.includes(object) < 2)
-} 
+    let reponGifts = [...(new Set(a1.concat(a2, a3)))]
+
+    return reponGifts.filter((object) => a1.includes(object) + a2.includes(object) + a3.includes(object) < 2)
+}
+
+console.log(gifts);
