@@ -11,8 +11,10 @@ function checkPart(part) {
     if (part === part.split("").reverse().join("")) return true
     return [...part].some((_, i) => {
         const word = [...part]
-        word.splice(i, 1)
-        return word.join("") === word.reverse().join("")
+        word.splice(i, 1);
+        let spli = word.join("");
+        let reverse = word.reverse().join("");
+        return spli === reverse;
     })
 }
 
